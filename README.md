@@ -6,7 +6,7 @@ Den är till för att för folk att använda LaTeX för sina inlämningar i kurs
 
 ## Installation
 
-git clone git://github.com/pbos/assignment/template_light (om man inte tankar en zipfil med mallen istället).
+> `git clone git://github.com/pbos/assignment/template_light`
 
 Du får jättegärna skapa en egen fork av projektet och istället ladda ner den. Du kan inte skicka in commitments direkt till detta projekt.
 
@@ -20,10 +20,10 @@ Osäker på paket för Windows/OS X, fixa gärna till i denna README och skicka 
 
 På Ubuntu 11.08 räcker det att köra
 
-  sudo apt-get install texlive-latex-base texlive-latex-recommended
+> `sudo apt-get install texlive-latex-base texlive-latex-recommended`
 
 ## Användning
 
-Ändra i assignment.tex som innehåller exempel både hur man inkluderar kodstycken och hela .java-filer i inlämningen.
+Ändra i `assignment.tex` som innehåller exempel både hur man inkluderar kodstycken och hela `.java`-filer i inlämningen.
 
 Kommer du på andra bra exempelsaker att ha med i denna mall så fixa gärna till och begär en pull-request till projektet.
