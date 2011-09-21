@@ -1,8 +1,8 @@
-XELATEX = xelatex -shell-escape
+LATEX=pdflatex --file-line-error
 
 all:
-	$(XELATEX) assignment.tex
-	$(XELATEX) assignment.tex
+	$(LATEX) assignment.tex
+	$(LATEX) assignment.tex
 
 clean:
 	rm -f *{pdf,log,aux,out,toc,pyg}
