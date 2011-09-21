@@ -26,4 +26,6 @@ På Ubuntu 11.08 räcker det att köra
 
 Ändra i `assignment.tex` som innehåller exempel både hur man inkluderar kodstycken och hela `.java`-filer i inlämningen.
 
+Kompilera sedan tex-filen genom att köra `make`, eller kompilera den direkt på vanligt sätt.
+
 Kommer du på andra bra exempelsaker att ha med i denna mall så fixa gärna till och begär en pull-request till projektet.
