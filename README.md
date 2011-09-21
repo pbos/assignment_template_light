@@ -4,7 +4,7 @@ Det här är en enklare version av Frosts `assignment_template` för att uppmunt
 
 ## Installation
 
-Enklast är att trycka på `Downloads` och hämta ner projektet som en zip-fil.
+Enklast är att trycka på `Downloads` och hämta ner projektet som en zip-fil. Annars kan man klona projektet med git:
 
 > `git clone git://github.com/pbos/assignment/template_light`
 
