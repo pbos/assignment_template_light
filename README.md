@@ -1,32 +1,27 @@
 # Inlämningsmall
 
-Den här mallen kan användas för att skapa lite snyggare latex-inlämningar till kurser på (exempelvis) KTH.
+Det här är en enklare version av: https://github.com/Frost/assignment_template
 
-Denna mall har stöd för godtyckliga utf8-tecken i kodlistningar (givet att man använder xelatex), vilket är något jag sett många ha problem med.
+Den är till för att för folk att använda LaTeX för sina inlämningar i kursen DD1341: Introduktion till datalogi. Den går att använda till annat, men får du igång Frosts mall så rekommenderas den.
 
-Mallen kräver att xelatex finns installerat, och fungerar bland annat på OS X med MacTex.
-Vill man använda make för att bygga sina dokument behöver ha det installerat också.
+## Installation
 
-## Hur gör man?
+git clone git://github.com/pbos/assignment/template_light (om man inte tankar en zipfil med mallen istället.
 
-Till att börja med behöver du ha någon LaTeX-distribution (med xetex) installerad. Exempel på sånada är:
+Sedan är det bara att tuta och köra. Förutsatt att man har en LaTeX-installation som erhåller de paket och som behövs för att köra.
 
-* [MacTex](http://www.tug.org/mactex/2011/) (För Mac OS X)
-* [TexLive](http://www.tug.org/texlive/)
-* [MikTex](http://miktex.org/)
+## LaTeX-paket
 
-Vidare behöver du även ha python-pluginet `Pygments` installerat.
+Osäker på paket för Windows/OS X, fixa gärna till i denna README och skicka en pull-request.
 
-I OS X kan du installera `Pygments` genom att köra följande kommando i terminalen:
-    
-    sudo easy_install pygments
+### Ubuntu
 
-Sen behöver du checka ut mallen:
+På Ubuntu 11.08 räcker det att köra
 
-    git clone git://github.com/Frost/assignment_template
-    cd assignment_template
+  sudo apt-get install texlive-latex-base texlive-latex-recommended
 
-Sen skriver du din inlämning i assignment.tex. Det finns en hel del kommentarer i filen som förklarar hur man gör diverse saker, bland annat hur man kan inkludera kodlistningar på ett snyggt sätt.
+## Användning
 
-När du är färdig med ditt dokument, skapar du en pdf av det genom att helt sonika köra `make` i terminalen.
+Ändra i assignment.tex som innehåller exempel både hur man inkluderar kodstycken och hela .java-filer i inlämningen.
 
+Kommer du på andra bra exempelsaker att ha med i denna mall så fixa gärna till och begär en pull-request till projektet.
