@@ -6,7 +6,9 @@ Den är till för att för folk att använda LaTeX för sina inlämningar i kurs
 
 ## Installation
 
-git clone git://github.com/pbos/assignment/template_light (om man inte tankar en zipfil med mallen istället.
+git clone git://github.com/pbos/assignment/template_light (om man inte tankar en zipfil med mallen istället).
+
+Du får jättegärna skapa en egen fork av projektet och istället ladda ner den. Du kan inte skicka in commitments direkt till detta projekt.
 
 Sedan är det bara att tuta och köra. Förutsatt att man har en LaTeX-installation som erhåller de paket och som behövs för att köra.
 
