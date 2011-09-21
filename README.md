@@ -22,6 +22,10 @@ På Ubuntu 11.08 räcker det att köra
 
 > `sudo apt-get install texlive-latex-base texlive-latex-recommended`
 
+### Windows
+
+Seems to work with [TeXworks](http://www.tug.org/texworks/)' default install.
+
 ## Användning
 
 Ändra i `assignment.tex` som innehåller exempel både hur man inkluderar kodstycken och hela `.java`-filer i inlämningen.
