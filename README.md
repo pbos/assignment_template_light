@@ -24,7 +24,7 @@ På Ubuntu 11.08 räcker det att köra
 
 ### Windows
 
-Seems to work with [TeXworks](http://www.tug.org/texworks/)' default install.
+Verkar fungera med [TeXworks](http://www.tug.org/texworks/) default-installation.
 
 ## Användning
 
