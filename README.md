@@ -1,16 +1,16 @@
 # Inlämningsmall
 
-Det här är en enklare version av Frosts `assignment_template` för att uppmuntra LaTeX för inlämningar i kursen DD1341: Introduktion till datalogi.
+Det här är en enklare version av Frosts `assignment_template` för att uppmuntra användning av LaTeX för inlämningar i kursen DD1341: Introduktion till datalogi.
 
 ## Installation
 
-Enklast är att trycka på `Downloads` och ta ner projektet som en zip-fil.
+Enklast är att trycka på `Downloads` och hämta ner projektet som en zip-fil.
 
 > `git clone git://github.com/pbos/assignment/template_light`
 
-Du får jättegärna skapa en egen fork av projektet och istället ladda ner den. Du kan inte skicka in commitments direkt till detta projekt.
+Du får jättegärna skapa en egen fork av projektet och istället ladda ner den. Då kan du ändra i ditt projekt och sedan begära en pull-request för att få in förändringarna i denna mall.
 
-Sedan är det bara att tuta och köra. Förutsatt att man har en LaTeX-installation som erhåller de paket och som behövs för att köra.
+Sedan är det bara att tuta och köra. Förutsatt att man har en LaTeX-installation med de paket och som behövs för att köra.
 
 ## LaTeX-paket
 
