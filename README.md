@@ -1,4 +1,4 @@
-/# Inlämningsmall
+# Inlämningsmall
 
 Det här är en enklare version av Frosts `assignment_template` för att uppmuntra användning av LaTeX för inlämningar i kursen DD1341: Introduktion till datalogi.
 
