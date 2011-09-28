@@ -1,36 +1,46 @@
 \documentclass[a4paper,10pt,twoside]{article}
-\usepackage[inner=3cm,top=3cm,outer=2cm,bottom=3cm]{geometry}
 \def\theauthor{Ture Teknolog} % TODO: stoppa in ditt namn här
 \def\homeworknumber{HT1} % TODO: stoppa in vilken hemläxa det är här
 \def\coursename{Introduktion till datalogi} % TODO: stoppan in kursnamn här
 \def\course{DD1341} % TODO: stoppa in kurskod här
 \def\thedate{\today} % Byt ut om du vill ha annat datum på inlämningen
 
-\usepackage[swedish]{babel}
-%\usepackage[english]{babel}
+\usepackage[inner=3cm,top=3cm,outer=2cm,bottom=3cm]{geometry} %Det här fixar så att den har en bra bredd och att det är samma bredd på alla sidor
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc} % Comment out this if you use xelatex or non-UTF8
-%\usepackage{moreverb}
+%\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
 \usepackage{amssymb}
 \usepackage{fancyhdr}
 \usepackage{fancyvrb}
-%\usepackage{algorithmic}
-%\usepackage{algorithm}
-\usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{xcolor}
 \definecolor{dark-blue}{rgb}{0, 0, 0.6}
 \usepackage{hyperref}
+% Nedanstående funkar inte i praktiken, kanske någon annan kan klura ut
 \hypersetup{
   colorlinks=true, 
   linkcolor=dark-blue,
   urlcolor=dark-blue
 }
-%\usepackage{minted}
 
+% Här definierar man färger, de här är standardfärgerna för java, som de syns i exempelvis BlueJ. Iaf enligt xmas, har tagit de från honom
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+
+% Här definierar man alltså hur det ska se ut när den fixar koden
+% De flesta saker säger sig själva vad de betyder. Finns eventuellt fler saker också.
 \usepackage{listings}
 \lstset{language=Java,
-	numbers=left,
+	basicstyle=\ttfamily,
+	%Här anges alltså vilka färger som sak användas. Vill ni inte ha färger, kommentera ut nästföljande fyra rader.
+	keywordstyle=\color{javapurple}\bfseries,
+	stringstyle=\color{javared},
+	commentstyle=\color{javagreen},
+	morecomment=[s][\color{javadocblue}]{/**}{*/},
+	numbers=left, % Fixar radnumrering i vänstermarginalen
 	numberstyle=\footnotesize,
 	title=\lstname,
 	showstringspaces=false,
@@ -38,14 +48,16 @@
 	extendedchars=true,
 	breaklines=true,
 	breakatwhitespace=true,
-	tabsize=4
+	tabsize=4 %Indenteringsstorlek
 }
 
+% Fixar så man kan ha åäö i kodkommentarer
 \lstset{literate={ö}{{\"o}}1
 	{ä}{{\"a}}1
 	{å}{{\aa}}1
 }
 
+% Header och footer
 \pagestyle{fancy}\headheight 13pt
 \fancyfoot{}
 \lhead{\course\ -\ Inlämning \homeworknumber}
@@ -54,9 +66,12 @@
 \title{Inlämning \homeworknumber\ - \course\ \coursename}
 \date{\thedate}
 \author{\theauthor}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
 
 \begin{document}
-% Ta bort labbcover + clearpage om du inte vill ha inda-bladet, lägg då till \maketitle
+
+% Ta bort labbcover + clearpage om du inte vill ha inda-bladet, lägg då till \maketitle exempelvis.
 \input{labbcover.tex}
 \clearpage
 \thispagestyle{empty}
@@ -64,44 +79,35 @@
 \clearpage 
 
 \setcounter{page}{1}
+
 % TODO: stoppa in faktiskt innehåll här.
 
-\section{Någon godtycklig sektion}
-\label{sec:någon_godtycklig_sektion}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\section{Vad är det här?}
+\label{sec:vad_är_det_här}
 
-\subsection{En godtycklig undersektion}
-\label{sub:en_godtycklig_undersektion}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Det här är alltså ett exempel på hur man kan lämna in sina INDA-labbar på ett snyggt sätt (så att man får guldstjärnor av sin asse). \LaTeX-mallen är förhoppningsvis kommenterad tillräckligt så att man ser vad det mesta betyder så att du kan ändra den efter eget behag. 
 
-\subsection{En annan godtycklig undersektion}
-\label{sub:en_annan_godtycklig_undersektion}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-% subsection en_godtycklig_undersektion (end)
-% section någon_godtycklig_sektion (end)
-
+Kom ihåg att byta ut ditt namn, kod och innehåll innan du lämnar in inlämningen. :)
 
 \section{Källkod}
 \label{sec:källkod}
 
+På det här sättet kan man inkludera en hel fil, så att du inte behöver hålla på och kopiera det in i \LaTeX. Notera att detta exempel förutsätter att nämnda kod-fil ligger i samma mapp som denna .tex-fil. 
+
 \subsection{Foo.java}
-\label{sub:foo_java}
+\label{sec:Foo_java} % En label till inkluderingen
+\lstinputlisting{Foo.java} % Och sedan anger man vilken fil man vill att den ska hämta in
+% Notera här att filen antas ligga i samma mapp som denna LaTeXs-fil
 
-Den här klassen är till för att demonstrera line-wrapping och att å, ä respektive ö fungerar bra i kodfiler också.
+\subsection{Inkludering av kod direkt i \LaTeX}
 
-% skriv in namnet på en javafil för att inkludera den
-\lstinputlisting{Foo.java}
-
-\subsection{Hello, World!}
+Ibland ska bara mindre småsaker redovisas, då kan det vara smidigare att lägga koden direkt i detta .tex-dokument som i detta exempel.
 
 För att skriva ut ``Hello, World!'' i Java så kan man lämpligtvis köra följande metodanrop.
 
 \begin{lstlisting}
 System.out.println("Hello World!");
 \end{lstlisting}
-
-% subsection foo_java (end)
-% section källkod (end)
 
 \end{document}
 

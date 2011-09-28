@@ -5,4 +5,4 @@ all:
 	$(LATEX) assignment.tex
 
 clean:
-	rm -f *{pdf,log,aux,out,toc,pyg}
+	rm -f assignment.pdf *.log *.out *.aux *.toc
