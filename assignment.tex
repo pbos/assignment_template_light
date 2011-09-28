@@ -1,9 +1,4 @@
 \documentclass[a4paper,10pt,twoside]{article}
-\def\theauthor{Ture Teknolog} % TODO: stoppa in ditt namn här
-\def\homeworknumber{HT1} % TODO: stoppa in vilken hemläxa det är här
-\def\coursename{Introduktion till datalogi} % TODO: stoppan in kursnamn här
-\def\course{DD1341} % TODO: stoppa in kurskod här
-\def\thedate{\today} % Byt ut om du vill ha annat datum på inlämningen
 
 \usepackage[inner=3cm,top=3cm,outer=2cm,bottom=3cm]{geometry} %Det här fixar så att den har en bra bredd och att det är samma bredd på alla sidor
 \usepackage[T1]{fontenc}
@@ -61,6 +56,9 @@
 \pagestyle{fancy}\headheight 13pt
 \fancyfoot{}
 \lhead{\course\ -\ Inlämning \homeworknumber}
+
+% Include author-specific information from the external file
+\input{authorinfo}
 \rhead{\theauthor\ -\ \thedate}
 \fancyfoot[LE,RO]{\thepage}
 \title{Inlämning \homeworknumber\ - \course\ \coursename}
