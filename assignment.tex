@@ -48,42 +48,43 @@
 
 \pagestyle{fancy}\headheight 13pt
 \fancyfoot{}
-\lhead{\course\ -\ \theauthor}
-\rhead{Hemläxa \homeworknumber}
+\lhead{\course\ -\ Inlämning \homeworknumber}
+\rhead{\theauthor\ -\ \thedate}
 \fancyfoot[LE,RO]{\thepage}
-\title{Hemläxa \homeworknumber\ - \course\ \coursename}
+\title{Inlämning \homeworknumber\ - \course\ \coursename}
 \date{\thedate}
 \author{\theauthor}
 
 \begin{document}
-\maketitle % skapa titelsida
-%  \thispagestyle{empty}\cfoot{}
-%\clearpage % ny sida
-%\thispagestyle{empty}\cfoot{}
-%\tableofcontents % innehållsförteckning
-%\cleardoublepage
+% Ta bort labbcover + clearpage om du inte vill ha inda-bladet, lägg då till \maketitle
+\input{labbcover.tex}
+\clearpage
+\thispagestyle{empty}
+\mbox{} % empty page for duplex
+\clearpage 
 
+\setcounter{page}{1}
 % TODO: stoppa in faktiskt innehåll här.
 
-\section{Någon godtycklig sektion} % (fold)
+\section{Någon godtycklig sektion}
 \label{sec:någon_godtycklig_sektion}
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-\subsection{En godtycklig undersektion} % (fold)
+\subsection{En godtycklig undersektion}
 \label{sub:en_godtycklig_undersektion}
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-\subsection{En annan godtycklig undersektion} % (fold)
+\subsection{En annan godtycklig undersektion}
 \label{sub:en_annan_godtycklig_undersektion}
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 % subsection en_godtycklig_undersektion (end)
 % section någon_godtycklig_sektion (end)
 
 
-\section{Källkod} % (fold)
+\section{Källkod}
 \label{sec:källkod}
 
-\subsection{Foo.java} % (fold)
+\subsection{Foo.java}
 \label{sub:foo_java}
 
 Den här klassen är till för att demonstrera line-wrapping och att å, ä respektive ö fungerar bra i kodfiler också.
@@ -93,7 +94,7 @@ Den här klassen är till för att demonstrera line-wrapping och att å, ä resp
 
 \subsection{Hello, World!}
 
-För att skriva ut ``Hello, World!'' i Java så kan man lämpligtvis köra följande funktion.
+För att skriva ut ``Hello, World!'' i Java så kan man lämpligtvis köra följande metodanrop.
 
 \begin{lstlisting}
 System.out.println("Hello World!");
@@ -101,7 +102,6 @@ System.out.println("Hello World!");
 
 % subsection foo_java (end)
 % section källkod (end)
-
 
 \end{document}
 
