@@ -1,8 +1,17 @@
-LATEX=pdflatex --file-line-error
+LATEX=xelatex --file-line-error -shell-escape
 
-all:
-	$(LATEX) assignment.tex
-	$(LATEX) assignment.tex
+.PHONY: default pdf distclean clean
+
+default: pdf
+
+pdf: assignment.pdf
+
+assignment.pdf: assignment.tex Math.java authorinfo.tex labcover.tex
+	$(LATEX) assignment
+	$(LATEX) assignment
+
+distclean: clean
+	rm -f assignment.pdf
 
 clean:
-	rm -f assignment.pdf *.log *.out *.aux *.toc
+	rm -f *.log *.out *.aux *.toc
