@@ -26,6 +26,10 @@ På Ubuntu 11.08 räcker det att köra
 
 Verkar fungera med [TeXworks](http://www.tug.org/texworks/) default-installation.
 
+### Mac OS X
+
+MacTex verkar vara standarddistrubitionen av TeXLive för Mac. Kan hittas [här](http://www.tug.org/mactex/) och verkar fungera bra. MacTeX.pkg är den intressanta filen.
+
 ## Användning
 
 Ändra i `assignment.tex` som innehåller exempel både hur man inkluderar kodstycken och hela `.java`-filer i inlämningen.
