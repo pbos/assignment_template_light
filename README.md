@@ -2,7 +2,7 @@
 
 Det här är en enklare version av Frosts `assignment_template` för att uppmuntra användning av LaTeX för inlämningar i kursen DD1339: Introduktion till datalogi.
 
-Denna version uppdaterar kurskoden och kompilerar filen med XeTeX istället för pdfLaTeX. Vill man kompilera med pdfLaTeX istället går det dock bra att använda kommandot 'make latex'. Denna version baserar också Make-filen på frosts mall.
+Denna version uppdaterar kurskoden och kompilerar filen med XeTeX istället för pdfLaTeX. Vill man kompilera med pdfLaTeX istället går det dock bra att använda kommandot 'make latex'. Denna version baserar också Make-filen på frosts mall. Versionen använder sig också av Latin Modern, ett vektoriserat typsnitt baserat på Computer Modern. Fördelen är att pdf-filerna ser bra mycket bättre ut på skärmen.
 
 ## Installation
 
