@@ -1,13 +1,23 @@
-LATEX=pdflatex
-LATEXFLAGS=-file-line-error
+LATEX=xelatex --file-line-error
+PDFLATEX=pdflatex --file-line-error
+LATEXFLAGS=
 
-all: assignment.pdf
+.PHONY: default xetex latex distclean clean
 
-assignment.pdf: assignment.tex
-	$(eval TMPDIR := $(shell mktemp -d))
-	$(LATEX) $(LATEXFLAGS) -output-directory $(TMPDIR) assignment.tex
-	$(LATEX) $(LATEXFLAGS) -output-directory $(TMPDIR) assignment.tex
-	mv $(TMPDIR)/assignment.pdf assignment.pdf
+default: xetex
+
+xetex: assignment.pdf
+
+assignment.pdf: assignment.tex labbcover.tex
+	$(LATEX) assignment
+
+latex: assignment_pdflatex.pdf
+
+assignment_pdflatex.pdf: assignment.tex labbcover.tex
+	$(PDFLATEX) assignment
+
+distclean: clean
+	rm -f assignment.pdf
 
 clean:
-	rm -f assignment.pdf
+	rm -f *.log *.out *.aux *.toc *.pyg
