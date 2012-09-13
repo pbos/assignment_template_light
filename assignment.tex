@@ -8,10 +8,12 @@
 %Det här fixar så att den har en bra bredd och att det är samma bredd på alla sidor
 \usepackage[inner=3cm,top=3cm,outer=2cm,bottom=3cm]{geometry}
 
+\usepackage{amsmath}
 \usepackage{ifxetex}
 \ifxetex % För XeLateX
 	\usepackage{polyglossia} % Motsvarande babel
 	\usepackage{fontspec}
+	\usepackage[]{unicode-math} % Hanterar matematisk typografi istället för amssymb
 	\setdefaultlanguage{swedish}
 	\usepackage{xunicode}
 \else % För pdfLaTeX
@@ -19,10 +21,10 @@
 	\usepackage[swedish]{babel}
 	\usepackage{lmodern} % Använd ett vektorbaserad typsnitt
 	\usepackage[utf8]{inputenc}
+	\usepackage{amssymb}
 	\usepackage{microtype} % Lite mer avancerad typografi
 \fi
 
-\usepackage{amssymb}
 \usepackage{fancyhdr}
 \usepackage{fancyvrb}
 \usepackage{graphicx}
