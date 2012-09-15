@@ -1,9 +1,4 @@
 \documentclass[a4paper,10pt,twoside]{article}
-\def\theauthor{Ture Teknolog} % TODO: stoppa in ditt namn här
-\def\homeworknumber{HT1} % TODO: stoppa in vilken hemläxa det är här
-\def\coursename{Introduktion till datalogi} % TODO: stoppan in kursnamn här
-\def\course{DD1341} % TODO: stoppa in kurskod här
-\def\thedate{\today} % Byt ut om du vill ha annat datum på inlämningen
 
 \usepackage[inner=3cm,top=3cm,outer=2cm,bottom=3cm]{geometry} %Det här fixar så att den har en bra bredd och att det är samma bredd på alla sidor
 \usepackage[T1]{fontenc}
@@ -19,10 +14,13 @@
 \usepackage{hyperref}
 % Nedanstående funkar inte i praktiken, kanske någon annan kan klura ut
 \hypersetup{
-  colorlinks=true, 
+  colorlinks=true,
   linkcolor=dark-blue,
   urlcolor=dark-blue
 }
+
+% Fixar lite config värden.
+\input{config.tex}
 
 % Här definierar man färger, de här är standardfärgerna för java, som de syns i exempelvis BlueJ. Iaf enligt xmas, har tagit de från honom
 \definecolor{javared}{rgb}{0.6,0,0} % for strings
@@ -79,7 +77,7 @@
 \clearpage
 \thispagestyle{empty}
 \mbox{} % empty page for duplex
-\clearpage 
+\clearpage
 
 \setcounter{page}{1}
 
@@ -88,14 +86,14 @@
 \section{Vad är det här?}
 \label{sec:vad_är_det_här}
 
-Det här är alltså ett exempel på hur man kan lämna in sina INDA-labbar på ett snyggt sätt (så att man får guldstjärnor av sin asse). \LaTeX-mallen är förhoppningsvis kommenterad tillräckligt så att man ser vad det mesta betyder så att du kan ändra den efter eget behag. 
+Det här är alltså ett exempel på hur man kan lämna in sina INDA-labbar på ett snyggt sätt (så att man får guldstjärnor av sin asse). \LaTeX-mallen är förhoppningsvis kommenterad tillräckligt så att man ser vad det mesta betyder så att du kan ändra den efter eget behag.
 
 Kom ihåg att byta ut ditt namn, kod och innehåll innan du lämnar in inlämningen. :)
 
 \section{Källkod}
 \label{sec:källkod}
 
-På det här sättet kan man inkludera en hel fil, så att du inte behöver hålla på och kopiera det in i \LaTeX. Notera att detta exempel förutsätter att nämnda kod-fil ligger i samma mapp som denna .tex-fil. 
+På det här sättet kan man inkludera en hel fil, så att du inte behöver hålla på och kopiera det in i \LaTeX. Notera att detta exempel förutsätter att nämnda kod-fil ligger i samma mapp som denna .tex-fil.
 
 \subsection{Foo.java}
 \label{sec:Foo_java} % En label till inkluderingen
