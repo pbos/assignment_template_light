@@ -1,51 +1,40 @@
-%\textheight=24.0cm
-%\textwidth=15.1cm
-%
-%\topmargin=-1.5cm
-%%\headheight=0cm
-%\headsep=0.7cm
-%\oddsidemargin=0.4cm
-%\evensidemargin=0.4cm
-%%\columnsep=0.8cm
-%\footskip=1.5cm
-%\setcounter{secnumdepth}{0}
-%\pagestyle{empty}
-%%\markboth{}{Namn: \hfill Personnr: \hfill}
-%%\markboth{DD1341 inda11}{DD1341 inda11}
+% Ett labbcover vars uppgifter definieras i det inkluderande dokumentet.
 
-%\begin{document}
+% TODO: Se till att följande är definierade i det inkluderande dokumentet:
+% \course
+% \coursename
+% \homeworknumber
+% \theauthor
+% \groupnumber
+% \exerciseleader
 
 \thispagestyle{empty}
-\section*{DD1341 Introduktion till datalogi}
-%\section*{DD1341 Introduktion till datalogi 2011/2012}
+\begin{fontsize}{15}{22} % Varning: åäö mm. är bara def. i vissa typsnitt.
+\begin{flushleft}
+	\textbf{\course\ \coursename}
 
-\vspace{10mm}
+	\vspace{40mm}
+	
+	\begin{tabular}{@{}ll}
+		\textbf{Uppgift nummer:} & \textbf\homeworknumber\\
+		\\
+		\textbf{Namn:}           & \textbf\theauthor\\
+		\\
+		\textbf{Grupp nummer:}   & \textbf\groupnumber\\
+		\\
+		\textbf{Övningsledare:}  & \textbf\exerciseleader\\
+	\end{tabular}
 
-\subsection*{Uppgift nummer: ......}
+	\vspace{130mm}
 
-\vspace{3mm}
+	\begin{tabular}{@{}lll}
+		\hline 
+		\hline
+		\\
+		\textbf{Betyg: ....} &
+		\textbf{Datum: ............} &
+		\textbf{Rättad av: ...............................} 
+	\end{tabular}
 
-\subsection*{Namn: ...........................................................................}
-
-\vspace{3mm}
-
-\subsection*{Grupp nummer: ......}
-
-\vspace{3mm}
-
-\subsection*{Övningsledare: ..............................................................}
-
-
-\vspace{10mm}
-
-\begin{tabular}{l}
- \hspace{140mm} \\
-\hline \hline
-\end{tabular}
-
-\vspace{5mm}
-
-\subsection*{Betyg: ..... \hspace{2mm}  Datum: .............. \hspace{2mm} Rättad av: ........................................}
-
-
-%\end{document}
+\end{fontsize}
+\end{flushleft}
