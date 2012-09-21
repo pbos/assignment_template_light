@@ -1,16 +1,30 @@
 \documentclass[a4paper,10pt,twoside]{article}
-\def\theauthor{Ture Teknolog} % TODO: stoppa in ditt namn här
+\def\theauthor{Axel Riese} % TODO: stoppa in ditt namn här
 \def\homeworknumber{HT1} % TODO: stoppa in vilken hemläxa det är här
 \def\coursename{Introduktion till datalogi} % TODO: stoppan in kursnamn här
-\def\course{DD1341} % TODO: stoppa in kurskod här
+\def\course{DD1339} % TODO: stoppa in kurskod här
 \def\thedate{\today} % Byt ut om du vill ha annat datum på inlämningen
 
-\usepackage[inner=3cm,top=3cm,outer=2cm,bottom=3cm]{geometry} %Det här fixar så att den har en bra bredd och att det är samma bredd på alla sidor
-\usepackage[T1]{fontenc}
-%\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{listings}
-\usepackage{amssymb}
+%Det här fixar så att den har en bra bredd och att det är samma bredd på alla sidor
+\usepackage[inner=3cm,top=3cm,outer=2cm,bottom=3cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{ifxetex}
+\ifxetex % För XeLateX
+	\usepackage{polyglossia} % Motsvarande babel
+	\usepackage{fontspec}
+	\usepackage[]{unicode-math} % Hanterar matematisk typografi istället för amssymb
+	\setdefaultlanguage{swedish}
+	\usepackage{xunicode}
+\else % För pdfLaTeX
+	\usepackage[T1]{fontenc}
+	\usepackage[swedish]{babel}
+	\usepackage{lmodern} % Använd ett vektorbaserad typsnitt
+	\usepackage[utf8]{inputenc}
+	\usepackage{amssymb}
+	\usepackage{microtype} % Lite mer avancerad typografi
+\fi
+
 \usepackage{fancyhdr}
 \usepackage{fancyvrb}
 \usepackage{graphicx}
@@ -24,18 +38,12 @@
   urlcolor=dark-blue
 }
 
-% Här definierar man färger, de här är standardfärgerna för java, som de syns i exempelvis BlueJ. Iaf enligt xmas, har tagit de från honom
-\definecolor{javared}{rgb}{0.6,0,0} % for strings
-\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
-\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
-\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
-
 % Här definierar man alltså hur det ska se ut när den fixar koden
-% De flesta saker säger sig själva vad de betyder. Finns eventuellt fler saker också.
 \usepackage{listings}
 \lstset{language=Java,
 	basicstyle=\ttfamily,
-	%Här anges alltså vilka färger som sak användas. Vill ni inte ha färger, kommentera ut nästföljande fyra rader.
+  % Här anges alltså vilka färger som sak användas. 
+  % Vill ni inte ha färger, kommentera ut nästföljande fyra rader.
 	keywordstyle=\color{javapurple}\bfseries,
 	stringstyle=\color{javared},
 	commentstyle=\color{javagreen},
@@ -51,14 +59,24 @@
 	tabsize=4 %Indenteringsstorlek
 }
 
-% Fixar så man kan ha åäö i kodkommentarer
-\lstset{literate={ö}{{\"o}}1
-	{ä}{{\"a}}1
-	{å}{{\aa}}1
-	{Ö}{{\"O}}1
-	{Ä}{{\"A}}1
-	{Å}{{\AA}}1
+\ifxetex 
+  % Gör inget
+\else
+  % Gör att man kan kommentera kod med å,ä,ö även i pdfLaTeX
+  \lstset{literate={ö}{{\"o}}1
+    {ä}{{\"a}}1
+    {å}{{\aa}}1
+    {Ö}{{\"O}}1
+    {Ä}{{\"A}}1
+    {Å}{{\AA}}1
 }
+\fi
+
+% Här definierar man färger, de här är standardfärgerna för java, som de syns i exempelvis BlueJ. Iaf enligt xmas, har tagit de från honom
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
 
 % Header och footer
 \pagestyle{fancy}\headheight 13pt
