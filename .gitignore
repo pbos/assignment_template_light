@@ -1,6 +1,5 @@
 *.swp
-*.aux
-*.log
-*.out
-*.toc
 *.pdf
+latex_env
+config.tex
+*.tex

@@ -20,7 +20,7 @@ public class Foo
     }
     /** Visar att även kod wrappas om raderna är riktigt jäkla långa. Varför du nu borde behöva detta är en annan fråga....*/
     public void reallyLongLine() {
-            power = Integer.MIN_VALUE + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1;
+        power = Integer.MIN_VALUE + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1;
     }
     // This is a very long line which should be forced to wrap if this thing is set up correctly. I really hope it works because whenever code escapes and remains outside the page it's really hard to read.
     public static void main(String[] args) {
